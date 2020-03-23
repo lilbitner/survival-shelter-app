@@ -1,10 +1,13 @@
 Category.destroy_all
 Item.destroy_all
+Cart.destroy_all
 
 category1 = Category.create(name: "Food")
 category2 = Category.create(name: "Medical")
 category3 = Category.create(name: "Tools")
 category4 = Category.create(name: "Shelter")
+
+cart1= Cart.create()
 
 item1 = Item.create(name: "Rice", image: "https://hips.hearstapps.com/vidthumb/images/delish-u-rice-2-1529079587.jpg", category: category1)
 item2 = Item.create(name: "Shotgun", image: "https://cdn11.bigcommerce.com/s-dbb29qu2to/images/stencil/1280x1280/products/340/860/mesa-tactical-sureshell-hook-loop-03__09646.1555706351.jpg?c=2&imbypass=on", category: category3)
@@ -18,4 +21,3 @@ item9 = Item.create(name: "Home", image: "https://freshome.com/wp-content/upload
 item10 = Item.create(name: "Alcohol", image: "https://www.minnpost.com/wp-content/uploads/sites/default/files/imagecache/article_detail/images/articles/WhiskeyBottles640.png?fit=640%2C500&strip=all", category: category2)
 item11 = Item.create(name: "Toilet Paper", image: "https://townsquare.media/site/394/files/2020/03/RS34340_GettyImages-499224059.jpg?w=980&q=75",category: category3)
 
-cart1= Cart.create()
