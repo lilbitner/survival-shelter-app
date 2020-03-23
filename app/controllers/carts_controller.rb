@@ -1,12 +1,12 @@
 class CartsController < ApplicationController
     def index 
         @carts = Cart.all
-        render json: @carts, include: :category
+        render json: @carts
      end 
  
      def show
         @cart = Cart.find(params[:id])
-        render json: @cart, include: :category
+        render json: @cart
      end 
      
      def update

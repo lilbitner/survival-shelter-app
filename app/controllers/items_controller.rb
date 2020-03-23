@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
     end
 
     def create
-        @item = Item.create(name: params[:name], image: params[:image], cart_id: params[:cart_id])
+        @item = Item.create(name: params[:name], image: params[:image], cart_id: params[:cart], category_id: params[:category])
         redirect_to 'http://localhost:3001/items'
     end
 
@@ -21,5 +21,17 @@ class ItemsController < ApplicationController
 
         redirect_to "http://localhost:3001/items"
      end 
+
+     def add_item_to_cart
+        @item = item.find(params[:id])
+
+        @item.update(
+            cart_id: params[:cart_id]
+            )
+            
+            render json: @item
+    end 
+
+
     
 end
